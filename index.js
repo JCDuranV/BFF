@@ -6,9 +6,9 @@ const port = 3000;
 app.get('/api/data', (req, res) => {
     // Aquí podrías hacer llamadas a otras APIs o bases de datos
     const data = {
-        message: 'Hello from the BFF!',
+        message: 'Esta aplicacion muestra las mascotas',
         frontend: 'React App',
-        user: 'John Doe'
+        user: 'Julian (Alvarado + Duran)'
     };
     res.json(data);
 });

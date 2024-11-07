@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-bff-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nodejs-bff
+  template:
+    metadata:
+      labels:
+        app: nodejs-bff
+    spec:
+      containers:
+      - name: nodejs-bff
+        image: jcduranv/bff_frontend 
+        ports:
+        - containerPort: 3000
